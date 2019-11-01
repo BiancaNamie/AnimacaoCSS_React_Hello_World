@@ -1,22 +1,96 @@
-.App {
-  text-align: center;
+html, body{
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+        /*background-image: radial-gradient( circle farthest-corner at 7.4% 45.1%,  rgba(236,206,251,1) 0%, rgba(205,237,246,1) 45.1%, rgba(227,251,252,1) 78.4%, rgba(230,247,235,1) 90% );
+    */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.content span{
+    font-size: 100px;
+    animation: wave 2s infinite;
+}
+
+@keyframes wave {
+    0%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
+}
+
+.pop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.pop li{
+    position: absolute;
+    display: list-item;
+    list-style: none;
+    float: left;
+
+    animation: popWorld 10s infinite;
+    bottom: -150px;
+}
+
+.pop li:nth-child(1){
+    left: 86%;
+    font-size: 100px;
+    animation-delay: 4s;
+}
+.pop li:nth-child(2){
+    left: 12%;
+    font-size: 50px;
+    animation-delay: 4s;
+}
+.pop li:nth-child(3){
+    left: 25%;
+    font-size: 35px;
+    animation-delay: 4s;
+}
+.pop li:nth-child(4){
+    left: 60%;
+    font-size: 70px;
+    animation-delay: 4s;
+}
+.pop li:nth-child(5){
+    left: 77%;
+    font-size: 30px;
+    animation-delay: 4s;
+}
+
+@keyframes popWorld {
+    0%{
+        transform:  translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform:  translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
 }

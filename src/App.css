@@ -55,7 +55,7 @@ html, body{
     float: left;
 
     animation: popWorld 10s infinite;
-    bottom: -150px;
+    bottom: -100px;
 }
 
 .pop li:nth-child(1){
@@ -66,31 +66,40 @@ html, body{
 .pop li:nth-child(2){
     left: 12%;
     font-size: 50px;
-    animation-delay: 4s;
+    animation-delay: 7s;
 }
 .pop li:nth-child(3){
     left: 25%;
     font-size: 35px;
-    animation-delay: 4s;
+    animation-delay: 8s;
 }
 .pop li:nth-child(4){
     left: 60%;
     font-size: 70px;
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 .pop li:nth-child(5){
     left: 77%;
     font-size: 30px;
-    animation-delay: 4s;
+    animation-delay: 1s;
 }
 
 @keyframes popWorld {
     0%{
-        transform:  translateY(0) rotate(0deg);
+        transform:  translateY(0) translateX(80px) rotate(0deg);
         opacity: 1;
     }
+    25%{
+        transform:  translateY(-250) translateX(-80px) rotate(90deg);
+    }
+    50%{
+        transform:  translateY(-500) translateX(-80px) rotate(180deg);
+    }
+    75%{
+        transform:  translateY(-750) translateX(-80px) rotate(270deg);
+    }
     100%{
-        transform:  translateY(-800px) rotate(360deg);
+        transform:  translateY(-1000px) translateX(80px) rotate(360deg);
         opacity: 0;
     }
 }
